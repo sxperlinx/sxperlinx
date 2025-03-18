@@ -1,0 +1,19 @@
+services:
+  webapp:
+    container_name: webapp-devel
+    build:
+      context: ./www/webapp
+      dockerfile: dev.Dockerfile
+    env_file: .env.development
+    volumes:
+      - ./www/webapp/src:/app/src
+      - ./www/webapp/public:/app/public
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - web_network_development
+    
+networks:
+  web_network_development:
+    external: true

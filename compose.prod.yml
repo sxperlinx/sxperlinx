@@ -1,0 +1,20 @@
+services:
+  webapp:
+    container_name: webapp-production
+    build:
+      context: ./www/webapp
+      dockerfile: prod.Dockerfile
+    env_file:
+      - .env.local
+    volumes:
+      - ./www/webapp/src:/app/src
+      - ./www/webapp/public:/app/public
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - web_network_production
+
+networks:
+  web_network_production:
+    external: true
