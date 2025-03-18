@@ -1,6 +1,6 @@
 services:
   webapp:
-    container_name: webapp-production
+    container_name: webapp
     build:
       context: ./www/webapp
       dockerfile: .docker/prod.Dockerfile
@@ -12,8 +12,33 @@ services:
     ports:
       - 3000:3000
     networks:
-      - web_network_production
+      - front-tier
+      - back-tier
+    command: bun run start
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:latest
+    container_name: prod-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: production-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - back-tier
 
 networks:
-  web_network_production:
-    external: true
+  front-tier:
+    external: false
+  back-tier:
+    external: false
+
+volumes:
+  db-data:
+    driver: flocker
+    external: false

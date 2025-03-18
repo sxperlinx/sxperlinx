@@ -14,7 +14,6 @@ COPY public ./public
 COPY next.config.ts .
 COPY tsconfig.json .
 
-ENV NODE_ENV=development
 ENV NEXT_TELEMETRY_DISABLED=1
 
 CMD \
