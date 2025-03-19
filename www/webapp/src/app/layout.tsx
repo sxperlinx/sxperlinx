@@ -1,29 +1,17 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Children } from '@/lib/props';
+import { Element } from '@/lib/types';
+import Meta from '@/lib/meta.config';
 import type { Metadata } from 'next';
 import '@/ui/css/globals.css';
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-});
+const geistSans = Meta.fonts.sans;
+const geistMono = Meta.fonts.mono;
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
+export const metadata: Metadata = Meta.metadata;
 
-export const metadata: Metadata = {
-	title: 'www',
-	description: 'www',
-};
-
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Children): Element {
 	return (
-		<html lang='en'>
+		<html lang={Meta.lang}>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>

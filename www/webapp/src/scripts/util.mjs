@@ -22,8 +22,8 @@ export function run(tasks) {
 }
 
 /**
- * 
- * @param {{msg:string,cmd:string}} task 
+ *
+ * @param {{msg:string,cmd:string}} task
  */
 function runTask(task) {
 	console.log(`::> ${task.msg}`);
