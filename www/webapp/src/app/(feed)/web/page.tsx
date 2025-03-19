@@ -1,5 +1,3 @@
 export default function Web() {
-  return (
-    <div>Web</div>
-  );
+	return <div>Web</div>;
 }

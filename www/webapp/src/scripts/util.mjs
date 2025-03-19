@@ -1,20 +1,31 @@
 import { execSync } from 'child_process';
 
 /**
- * 
- * @param {{ msg: string, cmd: string }[]} tasks 
+ *
+ * @param {{msg:string,cmd:string}[]} tasks
  */
-function run(tasks) {
-  try {
-    console.log('=== Running tasks ===');
-    tasks.forEach(({ msg, cmd }) => {
-      console.log(`::> ${msg}`);
-      execSync(cmd, { stdio: 'inherit' });
-    });
-  } catch (err) {
-    console.error(`Error: ${err.message}`);
-    throw err;
-  }
+export function run(tasks) {
+	try {
+		console.log('::: Running tasks :::');
+
+		if (tasks instanceof Array) {
+			tasks.forEach((task) => {
+				runTask(task);
+			});
+		} else {
+			runTask(tasks);
+		}
+	} catch (err) {
+		console.error('-:> Error running task:', err);
+		throw err;
+	}
 }
 
-export { run };
+/**
+ * 
+ * @param {{msg:string,cmd:string}} task 
+ */
+function runTask(task) {
+	console.log(`::> ${task.msg}`);
+	execSync(task.cmd, { stdio: 'inherit' });
+}

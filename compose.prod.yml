@@ -18,7 +18,7 @@ services:
     depends_on:
       - postgres
   postgres:
-    image: postgres:latest
+    image: postgres
     container_name: prod-postgres
     restart: always
     environment:

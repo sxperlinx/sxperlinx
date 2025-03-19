@@ -1,5 +1,3 @@
 export default function Linux() {
-  return (
-    <div>Linux</div>
-  );
+	return <div>Linux</div>;
 }

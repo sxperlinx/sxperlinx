@@ -1,3 +1,1 @@
-export default class Meta {
-  
-}
+export default class Meta {}

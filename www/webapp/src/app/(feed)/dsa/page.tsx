@@ -1,5 +1,3 @@
 export default function Dsa() {
-  return (
-    <div>Dsa</div>
-  );
+	return <div>Dsa</div>;
 }
