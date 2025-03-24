@@ -7,4 +7,6 @@
 ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
 ```
 
+![Banner](/x-assets/banner.txt)
+
 > **Feel free to contribute and share ideas ✨**
