@@ -2,16 +2,14 @@
 
 ## Supported Versions
 
-
-
 Versions supported by security updates.
+
 - ✅: Supported
 - :x:: Not supported
 
-| Version | Supported          |
-| ------- | ------------------ |
-|         |                    |
-
+| Version | Supported |
+| ------- | --------- |
+|         |           |
 
 ## Reporting a Vulnerability
 

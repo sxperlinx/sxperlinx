@@ -1,3 +1,3 @@
 # Logos
 
-Various logos as Vector graphics 
+Various logos as Vector graphics
