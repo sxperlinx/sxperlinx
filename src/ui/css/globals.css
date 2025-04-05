@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/* Safelisting grid span classes */
+@source inline("{col-span-{1,2,3},row-span-{1,2,3}}");
+
 :root {
 	--bg: #ffffff;
 	--fg: #171717;
