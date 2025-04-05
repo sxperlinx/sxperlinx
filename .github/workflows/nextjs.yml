@@ -41,7 +41,7 @@ jobs:
             exit 0
           elif [ -f "${{ github.workspace }}/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
-            if [ -f "${{ guthub.workspace }}/package-lock.json" ]; then
+            if [ -f "${{ github.workspace }}/package-lock.json" ]; then
               echo "command=ci" >> $GITHUB_OUTPUT
             else
               echo "command=install" >> $GITHUB_OUTPUT
