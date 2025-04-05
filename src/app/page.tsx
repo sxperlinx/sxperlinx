@@ -7,7 +7,7 @@ export default function Home(): Element {
 			<div>
 				<h1>sxperlinx</h1>
 			</div>
-			<CardWrapper />
+			{/* <CardWrapper /> */}
 		</main>
 	);
 }
