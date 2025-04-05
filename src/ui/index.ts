@@ -1,6 +1,6 @@
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import { JavaScriptIcon } from '@/ui/components/icons';
-import { Card } from '@/lib/types';
+import { Card, Tag } from '@/lib/types';
 
 export const cards: Card[] = [
 	{
@@ -142,5 +142,12 @@ export const cards: Card[] = [
 		icon: InformationCircleIcon,
 		href: 'example',
 		ratio: '1:1',
+	},
+];
+
+export const tags: Tag[] = [
+	{
+		label: 'Tag 1',
+		color: 'green',
 	},
 ];

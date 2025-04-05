@@ -43,3 +43,8 @@ export type Card = {
 	icon: Icon;
 	ratio: CardRatio;
 };
+
+export type Tag = {
+	label: string;
+	color: string;
+};
