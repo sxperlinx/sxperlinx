@@ -1,7 +1,7 @@
 import { Card as CardData, Element } from '@/lib/types';
 import cn, { fromRatio } from '@/lib/utils';
-import { cards } from '@/ui/data';
 import Link from 'next/link';
+import { cards } from '@/ui';
 
 export function Card({ card }: { card: CardData }): Element {
 	const Icon = card.icon;
