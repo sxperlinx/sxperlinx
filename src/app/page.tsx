@@ -1,9 +1,13 @@
+import { CardWrapper } from '@/ui/components/card';
 import { Element } from '@/lib/types';
 
 export default function Home(): Element {
 	return (
 		<main>
-			<h1>sxperlinx</h1>
+			<div>
+				<h1>sxperlinx</h1>
+			</div>
+			{/* <CardWrapper /> */}
 		</main>
 	);
 }
