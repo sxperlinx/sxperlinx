@@ -7,4 +7,4 @@
 ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
 ```
 
-> **Feel free to contribute and share ideas ✨**
+> **Feel free to contribute**
